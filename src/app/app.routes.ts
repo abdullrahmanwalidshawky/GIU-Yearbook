@@ -16,7 +16,10 @@ export const routes: Routes = [
   // STEP 2: Pages we have NOT designed/built yet use one placeholder page.
   // `data` lets us pass a small piece of information (the title) to it.
   // TIP: When you build the real page, replace `PlaceholderPage` with it.
-  { path: 'teachers', component: PlaceholderPage, data: { title: 'Teachers & Staff' } },
+  
+   {path: 'teachers',title: 'Teachers & Staff · GIU Yearbook',
+    loadComponent: () =>import('./pages/staff-page/staff-page').then((m) => m.StaffPage),
+},
   { path: 'gallery', component: PlaceholderPage, data: { title: 'Gallery' } },
   { path: 'login', component: PlaceholderPage, data: { title: 'Student login' } },
 
